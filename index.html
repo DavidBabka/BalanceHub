@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balance Hub</title>
+</head>
+
+<body>
+
+  <div id="home" class="state">
+    <div id="language-switcher">
+      <button class="lang-btn active" data-lang="en">🇬🇧</button>
+      <button class="lang-btn" data-lang="sk">🇸🇰</button>
+    </div>
+    <h1 style="font-family: Fugaz One;" data-i18n="greeting"></h1>
+    <p style="font-family: Poppins;" data-i18n="selectController"></p>
+    <button id="connect-controller-btn" data-i18n="connectControllerButton"></button>
+    <button id="about-btn" data-i18n="about"></button>
+  </div>
+
+  <div id="about" class="state hidden">
+    <h1 data-i18n="aboutTheProject"></h1>
+    <p data-i18n="aboutInformation"></p>
+    <button class="menu-back-btn" data-i18n="backButton"></button>
+  </div>
+
+  <div id="controllers" class="state hidden">
+    <h2 data-i18n="availableControllers"></h2>
+    <div id="controllerStatus"></div>
+    <div id="availableControllers">
+      <p data-i18n="noControllerInfo"></p>
+    </div>
+    <button id="games-btn" data-i18n="gamesButton"></button>
+    <button class="menu-back-btn" data-i18n="backButton"></button>
+  </div>
+
+  <div id="games" class="state hidden">
+    <h2 data-i18n="selectGameButton"></h2>
+    <button id="zones-btn">Zones</button>
+    <button id="moving-walls-btn">Moving walls</button>
+    <button id="zones-2-btn">Zones 2</button>
+    <button id="pingpong-btn">Pingpong</button>
+    <button id="maze-btn">Maze</button>
+    <button class="menu-back-btn" data-i18n="backButton"></button>
+  </div>
+
+  <div id="game" class="state hidden">
+    <button id="game-back-btn" data-i18n="backButton"></button>
+    <canvas id="renderCanvas"></canvas>
+    <div id="message"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
